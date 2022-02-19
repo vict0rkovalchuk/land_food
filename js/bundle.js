@@ -261,7 +261,7 @@ function forms(formSelector, modalTimerId) {
 
       const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-      (0,_services_services__WEBPACK_IMPORTED_MODULE_1__["default"])('http://localhost:3000/requests', json)
+      (0,_services_services__WEBPACK_IMPORTED_MODULE_1__.postData)('http://localhost:3000/requests', json)
         .then(data => {
           console.log(data);
           showThanksModal(message.success);
@@ -602,7 +602,7 @@ function tabs(
 
   tabsParent.addEventListener('click', event => {
     const target = event.target;
-    if (target && target.classList.contains(tabsSelector.slide(1))) {
+    if (target && target.classList.contains(tabsSelector.slice(1))) {
       tabs.forEach((item, i) => {
         if (target === item) {
           hideTabContent();

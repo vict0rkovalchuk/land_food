@@ -1,5 +1,5 @@
 import { closeModal, openModal } from './modal';
-import postData from '../services/services';
+import { postData } from '../services/services';
 
 function forms(formSelector, modalTimerId) {
   // Forms
